@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		604EB21823EACD5200F633C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604EB21723EACD5200F633C5 /* Assets.xcassets */; };
+		604EB21F23EACD5200F633C5 /* CoLab Notes MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 604EB21E23EACD5200F633C5 /* CoLab Notes MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		604EB22423EACD5200F633C5 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604EB22323EACD5200F633C5 /* Messages.framework */; };
+		604EB22723EACD5200F633C5 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604EB22623EACD5200F633C5 /* MessagesViewController.swift */; };
+		604EB22A23EACD5200F633C5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604EB22823EACD5200F633C5 /* MainInterface.storyboard */; };
+		604EB22C23EACD5300F633C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604EB22B23EACD5300F633C5 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		604EB22023EACD5200F633C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 604EB20E23EACD5000F633C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 604EB21D23EACD5200F633C5;
+			remoteInfo = "CoLab Notes MessagesExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		604EB23323EACD5300F633C5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				604EB21F23EACD5200F633C5 /* CoLab Notes MessagesExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		604EB21423EACD5000F633C5 /* CoLab Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoLab Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		604EB21723EACD5200F633C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		604EB21923EACD5200F633C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		604EB21E23EACD5200F633C5 /* CoLab Notes MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CoLab Notes MessagesExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		604EB22323EACD5200F633C5 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		604EB22623EACD5200F633C5 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		604EB22923EACD5200F633C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		604EB22B23EACD5300F633C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		604EB22D23EACD5300F633C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		604EB21B23EACD5200F633C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				604EB22423EACD5200F633C5 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		604EB20D23EACD5000F633C5 = {
+			isa = PBXGroup;
+			children = (
+				604EB21623EACD5000F633C5 /* CoLab Notes */,
+				604EB22523EACD5200F633C5 /* CoLab Notes MessagesExtension */,
+				604EB22223EACD5200F633C5 /* Frameworks */,
+				604EB21523EACD5000F633C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		604EB21523EACD5000F633C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				604EB21423EACD5000F633C5 /* CoLab Notes.app */,
+				604EB21E23EACD5200F633C5 /* CoLab Notes MessagesExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		604EB21623EACD5000F633C5 /* CoLab Notes */ = {
+			isa = PBXGroup;
+			children = (
+				604EB21723EACD5200F633C5 /* Assets.xcassets */,
+				604EB21923EACD5200F633C5 /* Info.plist */,
+			);
+			path = "CoLab Notes";
+			sourceTree = "<group>";
+		};
+		604EB22223EACD5200F633C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				604EB22323EACD5200F633C5 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		604EB22523EACD5200F633C5 /* CoLab Notes MessagesExtension */ = {
+			isa = PBXGroup;
+			children = (
+				604EB22623EACD5200F633C5 /* MessagesViewController.swift */,
+				604EB22823EACD5200F633C5 /* MainInterface.storyboard */,
+				604EB22B23EACD5300F633C5 /* Assets.xcassets */,
+				604EB22D23EACD5300F633C5 /* Info.plist */,
+			);
+			path = "CoLab Notes MessagesExtension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		604EB21323EACD5000F633C5 /* CoLab Notes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 604EB23423EACD5300F633C5 /* Build configuration list for PBXNativeTarget "CoLab Notes" */;
+			buildPhases = (
+				604EB21223EACD5000F633C5 /* Resources */,
+				604EB23323EACD5300F633C5 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				604EB22123EACD5200F633C5 /* PBXTargetDependency */,
+			);
+			name = "CoLab Notes";
+			productName = "CoLab Notes";
+			productReference = 604EB21423EACD5000F633C5 /* CoLab Notes.app */;
+			productType = "com.apple.product-type.application.messages";
+		};
+		604EB21D23EACD5200F633C5 /* CoLab Notes MessagesExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 604EB23023EACD5300F633C5 /* Build configuration list for PBXNativeTarget "CoLab Notes MessagesExtension" */;
+			buildPhases = (
+				604EB21A23EACD5200F633C5 /* Sources */,
+				604EB21B23EACD5200F633C5 /* Frameworks */,
+				604EB21C23EACD5200F633C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CoLab Notes MessagesExtension";
+			productName = "CoLab Notes MessagesExtension";
+			productReference = 604EB21E23EACD5200F633C5 /* CoLab Notes MessagesExtension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		604EB20E23EACD5000F633C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = none;
+				TargetAttributes = {
+					604EB21323EACD5000F633C5 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					604EB21D23EACD5200F633C5 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+				};
+			};
+			buildConfigurationList = 604EB21123EACD5000F633C5 /* Build configuration list for PBXProject "CoLab Notes" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 604EB20D23EACD5000F633C5;
+			productRefGroup = 604EB21523EACD5000F633C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				604EB21323EACD5000F633C5 /* CoLab Notes */,
+				604EB21D23EACD5200F633C5 /* CoLab Notes MessagesExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		604EB21223EACD5000F633C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				604EB21823EACD5200F633C5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		604EB21C23EACD5200F633C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				604EB22C23EACD5300F633C5 /* Assets.xcassets in Resources */,
+				604EB22A23EACD5200F633C5 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		604EB21A23EACD5200F633C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				604EB22723EACD5200F633C5 /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		604EB22123EACD5200F633C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 604EB21D23EACD5200F633C5 /* CoLab Notes MessagesExtension */;
+			targetProxy = 604EB22023EACD5200F633C5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		604EB22823EACD5200F633C5 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				604EB22923EACD5200F633C5 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		604EB22E23EACD5300F633C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		604EB22F23EACD5300F633C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		604EB23123EACD5300F633C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CoLab Notes MessagesExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.power186.CoLab-Notes.MessagesExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		604EB23223EACD5300F633C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CoLab Notes MessagesExtension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.power186.CoLab-Notes.MessagesExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		604EB23523EACD5300F633C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CoLab Notes/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.power186.CoLab-Notes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		604EB23623EACD5300F633C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CoLab Notes/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.power186.CoLab-Notes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		604EB21123EACD5000F633C5 /* Build configuration list for PBXProject "CoLab Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				604EB22E23EACD5300F633C5 /* Debug */,
+				604EB22F23EACD5300F633C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		604EB23023EACD5300F633C5 /* Build configuration list for PBXNativeTarget "CoLab Notes MessagesExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				604EB23123EACD5300F633C5 /* Debug */,
+				604EB23223EACD5300F633C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		604EB23423EACD5300F633C5 /* Build configuration list for PBXNativeTarget "CoLab Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				604EB23523EACD5300F633C5 /* Debug */,
+				604EB23623EACD5300F633C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 604EB20E23EACD5000F633C5 /* Project object */;
+}
