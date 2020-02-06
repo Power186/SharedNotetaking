@@ -9,7 +9,10 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController {
+class MessagesViewController: MSMessagesAppViewController, CompactDelegate, ExpandedDelegate {
+    let compactID:String = "compact"
+    let expandedID:String = "expanded"
+    var shouldClear:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,13 @@ class MessagesViewController: MSMessagesAppViewController {
         
         // Use this method to configure the extension and restore previously stored state.
     }
+    
+    // added the method didBecomeActive for consistent layout
+    override func didBecomeActive(with conversation: MSConversation) {
+        presentVC(presentationStyle: self.presentationStyle)
+    }
+        
+    
     
     override func didResignActive(with conversation: MSConversation) {
         // Called when the extension is about to move from the active to inactive state.
@@ -58,10 +68,89 @@ class MessagesViewController: MSMessagesAppViewController {
         // Use this method to prepare for the change in presentation style.
     }
     
+    func presentVC(presentationStyle:MSMessagesAppPresentationStyle) {
+        let identifier = (presentationStyle == .compact) ? compactID : expandedID
+        let controller = storyboard!.instantiateViewController(identifier: identifier)
+        
+        
+        for child in children {
+            child.willMove(toParent: nil)
+            child.view.removeFromSuperview()
+            child.removeFromParent()
+        }
+        // add new controller whether it is expanded or compact to messages app vc
+        addChild(controller)
+        
+        // reset the frame and add it as a subview
+        controller.view.frame = view.bounds
+        controller.view.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(controller.view)
+        
+        // reset anchors
+        controller.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        controller.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        controller.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+        // call to parent vc
+        controller.didMove(toParent: self)
+        
+        if let compact = controller as? CompactViewController {
+            compact.delegate = self
+        }
+        else if let expanded = controller as? ExpandedViewController {
+            expanded.delegate = self
+            if shouldClear {
+                expanded.clearText()
+                shouldClear = false
+            }
+            
+            // defining delegate then checking to see if there is URL
+            else if let url = self.activeConversation?.selectedMessage?.url {
+                expanded.didOpen(from: url)
+            }
+        }
+    }
+    
     override func didTransition(to presentationStyle: MSMessagesAppPresentationStyle) {
         // Called after the extension transitions to a new presentation style.
     
         // Use this method to finalize any behaviors associated with the change in presentation style.
+        // call present vc method when transition happens between the view controllers
+        presentVC(presentationStyle: presentationStyle)
+    }
+    
+    func newNote() {
+        shouldClear = true
+        self.requestPresentationStyle(.expanded)
+    }
+    
+    func sendMessage(title: String, note: String) {
+        let session = self.activeConversation?.selectedMessage?.session ?? MSSession()
+        let message = MSMessage(session: session)
+        let layout = MSMessageTemplateLayout()
+        layout.caption = note
+        layout.subcaption = title
+        
+        // identify user when sending a message in sent/edited notes
+        let user:String =
+            self.activeConversation?.localParticipantIdentifier.uuidString ?? "Unknown"
+        layout.trailingSubcaption = "Edited by $\(user)" //use $ to add user in view
+        
+        message.layout = layout
+        message.url = getMessageURL(title: title, note: note)
+        self.activeConversation?.insert(message, completionHandler: { (e:Error?) in
+            print("complete!")
+        })
+        self.dismiss()
+    }
+    
+    func getMessageURL(title:String,note:String) -> URL {
+        var components = URLComponents()
+        let qTitle = URLQueryItem(name: "title", value: title)
+        let qNote = URLQueryItem(name: "note", value: note)
+        components.queryItems = [qTitle, qNote]
+        return components.url!
     }
 
 }
